@@ -1,1 +1,1 @@
-web: Jin_project -port=$PORT
+web: Jin_project 
