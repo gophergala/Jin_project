@@ -41,7 +41,7 @@ func defaultHandler(w http.ResponseWriter, r *http.Request) {
    //fmt.Fprintf(w, "<h1>Hello 112 %s!</h1>", r.URL.Path[1:])
    // fmt.Fprintf(w, "<h1>Joke of the DAY : %s!</h1>", r.URL.Path[1:])
    var x string =  getdataforjokes()
-   fmt.Fprintf(w, fmt.Sprintf( `<html><head>    <title>ChuckNorris Speak  jokes </title>    <META http-equiv="refresh" content="5;">  </head>  <body bgcolor="#ffffff">`) )
+   fmt.Fprintf(w, fmt.Sprintf( `<html><head>    <title>ChuckNorris Speak  jokes </title>    <META http-equiv="refresh" content="500;">  </head>  <body bgcolor="#ffffff">`) )
    fmt.Fprintf(w, fmt.Sprintf( `<img src ='http://i2.kym-cdn.com/entries/icons/original/000/000/244/chuck_norris.jpg'</img>`) )
  
    
