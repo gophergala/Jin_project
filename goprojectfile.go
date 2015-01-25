@@ -43,7 +43,7 @@ func defaultHandler(w http.ResponseWriter, r *http.Request) {
    var x string =  getdataforjokes()
    
   
-   fmt.Fprintf(w, fmt.Sprintf("<h1>Joke of the DAY :</h1> <BR/>  <marquee direction='down' width='1250' height='200' behavior='alternate' style='border:solid'>  <marquee behavior='alternate'> %#q   </marquee></marquee>  <BR/>"  , x) )
+   fmt.Fprintf(w, fmt.Sprintf("<h1>Joke of the DAY :</h1> <BR/>  <marquee behavior='alternate'> %#q   </marquee> <BR/>"  , x) )
    var y string = strings.Replace(x ," " ,"+",-1)
    fmt.Fprintf(w, fmt.Sprintf(" <BR/> <iframe  width='2' height='2'  style= 'display:none' src ='http://tts-api.com/tts.mp3?q=%#q' </iframe> <BR/> ", y ) )
 }
