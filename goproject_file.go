@@ -7,7 +7,16 @@ import (
 	"net/http"
 	"encoding/json"
 	"strings"
+	"os"
 	)
+var port = func() string {
+	tmpport := os.Getenv("PORT")
+	if tmpport == "" {
+		tmpport = "5000"
+	}
+
+	return tmpport
+}
 
 func main() {
 	
@@ -15,8 +24,10 @@ func main() {
 	// var x string =  getdataforjokes()
 	// fmt.Println(x)
 	 http.HandleFunc("/", defaultHandler)
-     http.ListenAndServe(":8080", nil)
-
+     err := http.ListenAndServe(":" + port(), nil)
+	if err != nil {
+		log.Fatal("ListenAndServe: ", err)
+	}
 
 
 

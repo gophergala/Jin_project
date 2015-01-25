@@ -1,1 +1,1 @@
-"web: ./goproject_file -port 8080" 
+"web: ./goproject_file" 
