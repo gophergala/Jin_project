@@ -1,1 +1,1 @@
-web: speedy-bible -port=$PORT 
+web: goproject_file -port=$PORT
