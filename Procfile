@@ -1,1 +1,1 @@
-"web: ./goproject_file" 
+web: speedy-bible -port=$PORT 
