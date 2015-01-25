@@ -41,11 +41,14 @@ func defaultHandler(w http.ResponseWriter, r *http.Request) {
    //fmt.Fprintf(w, "<h1>Hello 112 %s!</h1>", r.URL.Path[1:])
    // fmt.Fprintf(w, "<h1>Joke of the DAY : %s!</h1>", r.URL.Path[1:])
    var x string =  getdataforjokes()
+   fmt.Fprintf(w, fmt.Sprintf( `<html><head>    <title>ChuckNorris Speak  jokes </title>    <META http-equiv="refresh" content="5;">  </head>  <body bgcolor="#ffffff">`) )
+   fmt.Fprintf(w, fmt.Sprintf( `<img src ='http://i2.kym-cdn.com/entries/icons/original/000/000/244/chuck_norris.jpg'</img>`) )
+ 
    
-  
    fmt.Fprintf(w, fmt.Sprintf("<h1>Joke of the DAY :</h1> <BR/>  <marquee behavior='alternate'> %#q   </marquee> <BR/>"  , x) )
    var y string = strings.Replace(x ," " ,"+",-1)
    fmt.Fprintf(w, fmt.Sprintf(" <BR/> <iframe  width='2' height='2'  style= 'display:none' src ='http://tts-api.com/tts.mp3?q=%#q' </iframe> <BR/> ", y ) )
+    fmt.Fprintf(w, fmt.Sprintf(`</body></html>`) )
 }
 
 func getdataforjokes() string {
