@@ -1,1 +1,1 @@
-web:goproject_file.exe 
+web: Jin_project -port=$PORT
