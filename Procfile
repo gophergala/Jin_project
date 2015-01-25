@@ -1,1 +1,1 @@
-web: goproject_file -port=$PORT
+web: JINTHAKUR -port=$PORT
